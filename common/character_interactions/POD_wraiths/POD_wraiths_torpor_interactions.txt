@@ -45,3 +45,50 @@ POD_remove_caul_interaction = {
 		base = 0
 	}
 }
+
+POD_soulforge_cauled_wraith_interaction = {
+	category = interaction_category_wraith
+	icon = POD_wraith_interaction
+	desc = POD_soulforge_cauled_wraith_interaction_desc
+	
+	cost = { prestige = 50 }
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = { POD_is_wraith_trigger = yes }
+		scope:recipient = { has_character_modifier = caul_modifier }
+		scope:recipient = { has_trait = torpor }
+		POD_basic_interaction_is_shown = yes
+	}
+	
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			trigger_if = {
+				limit = {
+					NOT = { has_trait = wraith }
+					NOT = { has_trait = demon }
+				}
+				has_access_to_underworld_trigger = yes
+			}
+		}
+		POD_interaction_is_valid_showing_failures_only = yes
+	}
+	
+	on_accept = {
+		scope:recipient = {
+			death = {
+				killer = scope:actor
+				death_reason = death_soulforging_killer
+			}
+		}
+		scope:actor = {
+			add_gold = 50
+		}
+	}
+	
+	auto_accept = yes
+	
+	ai_will_do = {
+		base = 0
+	}
+}

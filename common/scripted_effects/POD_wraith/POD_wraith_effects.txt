@@ -1,4 +1,4 @@
-﻿
+
 POD_become_wraith_effect = {
 	save_temporary_scope_value_as = {
 		name = saved_immortal_age
