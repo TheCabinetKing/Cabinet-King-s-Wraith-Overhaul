@@ -1,4 +1,4 @@
-POD_remove_caul_interaction = {
+﻿POD_remove_caul_interaction = {
 	category = interaction_category_wraith
 	icon = POD_wraith_interaction
 	desc = POD_remove_caul_interaction_desc

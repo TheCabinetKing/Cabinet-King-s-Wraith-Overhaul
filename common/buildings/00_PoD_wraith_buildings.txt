@@ -193,7 +193,7 @@ haunted_city_walls_05 = {
 	}
 }
 
-haunted_workshops_01 = {
+soulforge_01 = {
 	construction_time = standard_construction_time
 	flag = wraith
 
@@ -217,8 +217,9 @@ haunted_workshops_01 = {
 	
 	cost_gold = cheap_building_tier_1_cost
 	
-	province_modifier = {
+	character_modifier = {
 		monthly_income = 0.3
+		monthly_prestige = -0.2
 	}
 
 	type_icon = "icon_building_smiths.dds"
@@ -228,9 +229,9 @@ haunted_workshops_01 = {
 		ai_general_building_modifier = yes
 	}
 
-	next_building = haunted_workshops_02
+	next_building = soulforge_02
 }
-haunted_workshops_02 = {
+soulforge_02 = {
 	construction_time = standard_construction_time
 	flag = wraith
 
@@ -254,8 +255,9 @@ haunted_workshops_02 = {
 	
 	cost_gold = cheap_building_tier_2_cost
 	
-	province_modifier = {
+	character_modifier = {
 		monthly_income = 0.6
+		monthly_prestige = -0.4
 	}
 
 	type_icon = "icon_building_smiths.dds"
@@ -265,9 +267,9 @@ haunted_workshops_02 = {
 		ai_general_building_modifier = yes
 	}
 
-	next_building = haunted_workshops_03
+	next_building = soulforge_03
 }
-haunted_workshops_03 = {
+soulforge_03 = {
 	construction_time = standard_construction_time
 	flag = wraith
 
@@ -291,8 +293,9 @@ haunted_workshops_03 = {
 	
 	cost_gold = cheap_building_tier_3_cost
 	
-	province_modifier = {
+	character_modifier = {
 		monthly_income = 0.9
+		monthly_prestige = -0.6
 	}
 
 	type_icon = "icon_building_smiths.dds"
@@ -304,7 +307,7 @@ haunted_workshops_03 = {
 
 	next_building = haunted_workshops_04
 }
-haunted_workshops_04 = {
+soulforge_04 = {
 	construction_time = standard_construction_time
 	flag = wraith
 
@@ -328,8 +331,9 @@ haunted_workshops_04 = {
 	
 	cost_gold = cheap_building_tier_4_cost
 	
-	province_modifier = {
+	character_modifier = {
 		monthly_income = 1.2
+		monthly_prestige = -0.8
 	}
 
 	type_icon = "icon_building_smiths.dds"
@@ -339,9 +343,9 @@ haunted_workshops_04 = {
 		ai_general_building_modifier = yes
 	}
 
-	next_building = haunted_workshops_05
+	next_building = soulforge_05
 }
-haunted_workshops_05 = {
+soulforge_05 = {
 	construction_time = standard_construction_time
 	flag = wraith
 
@@ -358,8 +362,9 @@ haunted_workshops_05 = {
 	
 	cost_gold = cheap_building_tier_5_cost
 	
-	province_modifier = {
+	character_modifier = {
 		monthly_income = 1.5
+		monthly_prestige = -1.0
 	}
 
 	type_icon = "icon_building_smiths.dds"
@@ -579,9 +584,6 @@ haunted_mansions_01 = {
 	character_modifier = {
         monthly_prestige = 0.2
 	}
-	province_modifier = {
-		monthly_income = 0.1
-	}
 
 	type_icon = "icon_structure_palace_of_achen.dds"
 	
@@ -618,9 +620,6 @@ haunted_mansions_02 = {
 	
 	character_modifier = {
         monthly_prestige = 0.4
-	}
-	province_modifier = {
-		monthly_income = 0.2
 	}
 
 	type_icon = "icon_structure_palace_of_achen.dds"
@@ -659,9 +658,6 @@ haunted_mansions_03 = {
 	character_modifier = {
         monthly_prestige = 0.6
 	}
-	province_modifier = {
-		monthly_income = 0.3
-	}
 
 	type_icon = "icon_structure_palace_of_achen.dds"
 	
@@ -699,9 +695,6 @@ haunted_mansions_04 = {
 	character_modifier = {
         monthly_prestige = 0.8
 	}
-	province_modifier = {
-		monthly_income = 0.4
-	}
 
 	type_icon = "icon_structure_palace_of_achen.dds"
 	
@@ -731,9 +724,6 @@ haunted_mansions_05 = {
 	
 	character_modifier = {
         monthly_prestige = 1
-	}
-	province_modifier = {
-		monthly_income = 0.5
 	}
 
 	type_icon = "icon_structure_palace_of_achen.dds"
@@ -769,7 +759,6 @@ haunted_blacksmiths_01 = {
 	cost_gold = cheap_building_tier_1_cost
 	
 	province_modifier = {
-		monthly_income = 0.1
 		stationed_POD_plasmic_maa_damage_mult = 0.1
 		stationed_POD_wraith_maa_damage_mult = 0.1
 	}
@@ -808,7 +797,6 @@ haunted_blacksmiths_02 = {
 	cost_gold = cheap_building_tier_2_cost
 	
 	province_modifier = {
-		monthly_income = 0.2
 		stationed_POD_plasmic_maa_damage_mult = 0.2
 		stationed_POD_wraith_maa_damage_mult = 0.2
 	}
@@ -847,7 +835,6 @@ haunted_blacksmiths_03 = {
 	cost_gold = cheap_building_tier_3_cost
 	
 	province_modifier = {
-		monthly_income = 0.3
 		stationed_POD_plasmic_maa_damage_mult = 0.3
 		stationed_POD_wraith_maa_damage_mult = 0.3
 	}
@@ -886,7 +873,6 @@ haunted_blacksmiths_04 = {
 	cost_gold = cheap_building_tier_4_cost
 	
 	province_modifier = {
-		monthly_income = 0.4
 		stationed_POD_plasmic_maa_damage_mult = 0.4
 		stationed_POD_wraith_maa_damage_mult = 0.4
 	}
@@ -918,7 +904,6 @@ haunted_blacksmiths_05 = {
 	cost_gold = cheap_building_tier_5_cost
 	
 	province_modifier = {
-		monthly_income = 0.5
 		stationed_POD_plasmic_maa_damage_mult = 0.5
 		stationed_POD_wraith_maa_damage_mult = 0.5
 	}
@@ -958,9 +943,6 @@ haunted_church_01 = {
 	character_modifier = {
         monthly_piety = 0.2
 	}
-	province_modifier = {
-		monthly_income = 0.1
-	}
 
 	type_icon = "icon_building_monastic_schools.dds"
 	
@@ -997,9 +979,6 @@ haunted_church_02 = {
 	
 	character_modifier = {
         monthly_piety = 0.4
-	}
-	province_modifier = {
-		monthly_income = 0.2
 	}
 
 	type_icon = "icon_building_monastic_schools.dds"
@@ -1038,9 +1017,6 @@ haunted_church_03 = {
 	character_modifier = {
         monthly_piety = 0.6
 	}
-	province_modifier = {
-		monthly_income = 0.3
-	}
 
 	type_icon = "icon_building_monastic_schools.dds"
 	
@@ -1078,9 +1054,6 @@ haunted_church_04 = {
 	character_modifier = {
         monthly_piety = 0.8
 	}
-	province_modifier = {
-		monthly_income = 0.4
-	}
 
 	type_icon = "icon_building_monastic_schools.dds"
 	
@@ -1110,9 +1083,6 @@ haunted_church_05 = {
 	
 	character_modifier = {
         monthly_piety = 1
-	}
-	province_modifier = {
-		monthly_income = 0.5
 	}
 
 	type_icon = "icon_building_monastic_schools.dds"
@@ -1148,8 +1118,11 @@ tithe_of_the_dead_01 = {
 	cost_gold = cheap_building_tier_1_cost
 	
 	province_modifier = {
-		monthly_income = 0.2
 		tax_mult = 0.1
+	}
+
+	character_modifier = {
+		monthly_income = 0.2
 	}
 
 	type_icon = "icon_building_tax_assessor.dds"
@@ -1184,8 +1157,11 @@ tithe_of_the_dead_02 = {
 	cost_gold = cheap_building_tier_2_cost
 	
 	province_modifier = {
-		monthly_income = 0.4
 		tax_mult = 0.2
+	}
+
+	character_modifier = {
+		monthly_income = 0.4
 	}
 
 	type_icon = "icon_building_tax_assessor.dds"
@@ -1220,8 +1196,11 @@ tithe_of_the_dead_03 = {
 	cost_gold = cheap_building_tier_3_cost
 	
 	province_modifier = {
-		monthly_income = 0.6
 		tax_mult = 0.3
+	}
+
+	character_modifier = {
+		monthly_income = 0.6
 	}
 
 	type_icon = "icon_building_tax_assessor.dds"
