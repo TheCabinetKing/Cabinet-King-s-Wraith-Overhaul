@@ -2614,7 +2614,7 @@ fulfill_passion_hatred_requirements = {
 	scope = character
 	is_shown = {
         POD_is_wraith_trigger = yes
-        POD_has_fetter_of_type = { TYPE = flag:hatred }
+        POD_has_fetter_of_type = { TYPE = hatred }
     }
 	is_valid = { always = yes }
 }
@@ -2630,7 +2630,7 @@ fulfill_passion_hatred_travel_phase = {
 	scope = character
 	effect = {
 		POD_journey_start_travel_phase = {
-			EVENT = POD_wraith_passions.10
+			EVENT = POD_wraith_passions.100
 		}
 	}
 }

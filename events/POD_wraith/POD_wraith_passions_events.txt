@@ -1,36 +1,105 @@
 ﻿namespace = POD_wraith_passions
 
-POD_wraith_passions.10 = {
+###################################
+# Indulge Passion: Hatred.
+###################################
+POD_wraith_passions.100 = {
     type = character_event
     content_source = dlc_POD
-    title = POD_wraith_passions.fulfill_hatred.t
-    desc = POD_wraith_passions.fulfill_hatred.desc
+    title = POD_wraith_passions.100.t
+    desc = POD_wraith_passions.100.desc
 
     right_portrait = root
     theme = wraith
 
-    POD_end_journey_effect = yes
-
-    option = {
-        name = POD_wraith_passions.fulfill_hatred.option.a
-        trigger_event = POD_wraith_passions.11
+    immediate = {
+        POD_end_journey_effect = yes
     }
+
+    # Observe mortal.
+    option = {
+        name = POD_wraith_passions.100.option.a
+        trigger_event = POD_wraith_passions.110
+    }
+
+    # Indulge Dark Passion. Should always be last in list.
+    option = {
+        name = POD_wraith_passions.100.option.b
+        trigger_event = POD_wraith_passions.120
+    }
+
+    # No option to back out, as observing a mortal is a safe option anyway.
 }
 
-POD_wraith_passions.11 = {
+# Indulge Hatred by observing a mortal (% chance to regain small amount of Pathos).
+POD_wraith_passions.110 = {
     type = character_event
     content_source = dlc_POD
-    title = POD_wraith_passions.fulfill_hatred.secondhand.t
-    desc = POD_wraith_passions.fulfill_hatred.secondhand.desc
+    title = POD_wraith_passions.110.t
+    desc = POD_wraith_passions.110.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            template = pool_repopulate_martial
+            trait = mortal
+            faith = faith:innocence
+            random_traits = yes
+        
+            save_scope_as = victim
+        }
+    }
 
     left_portrait = root
-    right_portrait = victim
+    right_portrait = {
+        character = scope:victim
+    }
     theme = wraith
+    
     option = {
-        name = POD_wraith_passions.fulfill_hatred.secondhand.confirm
-        POD_pulse_chance_passion = { TYPE = flag:hatred }
+        name = POD_wraith_passions.110.confirm
+        flavor = POD_wraith_passions.110.confirm.flavor
+        POD_pulse_chance_passion = { TYPE = hatred }
     }
 }
+
+#Indulge Hatred by wanton slaughter (Dark Passion, but fully refill Pathos)
+POD_wraith_passions.120 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.120.t
+    desc = POD_wraith_passions.120.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            template = pool_repopulate_martial
+            trait = wraith
+            faith = faith:
+            random_traits = yes
+        
+            save_scope_as = victim
+        }
+        scope:victim = {
+            trigger_event = {
+                id = POD_wraith_maintenance.20
+            }
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:victim
+    }
+    theme = wraith
+    option = {
+        name = POD_wraith_passions.120.confirm
+        flavor = POD_wraith_passions.120.confirm.flavor
+        POD_pathos_income_effect = { COUNT = 5 }
+		POD_static_stress_gain = { COUNT = 100 }
+    }
+}
+
 
 # POD_wraith_passions.100 = {
 # 	type = character_event

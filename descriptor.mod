@@ -8,4 +8,4 @@ tags={
 	"Decisions"
 }
 name="PoD: The Cabinet King's Wraith Overhaul"
-supported_version="1.16.2.3"
+supported_version="1.18.2"

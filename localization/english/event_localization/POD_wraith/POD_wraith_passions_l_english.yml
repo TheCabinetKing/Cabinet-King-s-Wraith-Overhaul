@@ -1,0 +1,10 @@
+﻿l_english:
+ POD_wraith_passions.100.t: "Indulging Hatred"
+ POD_wraith_passions.100.desc: "Hatred time!"
+ POD_wraith_passions.100.option.a: "Observe a mortal committing murder. #weak ([ROOT.Var('passion_count').GetValue|0]/5)#!"
+ POD_wraith_passions.100.option.b: "Slay the first Wraith I see where they stand!"
+ POD_wraith_passions.100.option.back: "Finish."
+
+ POD_wraith_passions.110.confirm.flavor: "Depending on how powerful your [Passion|E] is, you may regain one Pathos."
+
+ POD_wraith_passions.120.confirm.flavor: "You will refill all of your Pathos, but your Shadow will grow stronger..."
