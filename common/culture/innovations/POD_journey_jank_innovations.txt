@@ -2195,3 +2195,55 @@ fulfill_passion_love_illustration = {
     group = culture_group_regional
     culture_era = culture_era_late_medieval
 }
+
+fulfill_passion_greed_icon = {
+    icon = "gfx/interface/icons/faith/spectreskull.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+fulfill_passion_greed_illustration = {
+    icon = "gfx/interface/illustrations/decisions/decision_POD_lament.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+
+fulfill_passion_creativity_icon = {
+    icon = "gfx/interface/icons/faith/spectreskull.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+fulfill_passion_creativity_illustration = {
+    icon = "gfx/interface/illustrations/decisions/decision_POD_lament.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+
+fulfill_passion_compassion_icon = {
+    icon = "gfx/interface/icons/faith/spectreskull.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+fulfill_passion_compassion_illustration = {
+    icon = "gfx/interface/illustrations/decisions/decision_POD_lament.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+
+fulfill_passion_justice_icon = {
+    icon = "gfx/interface/icons/faith/spectreskull.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+fulfill_passion_justice_illustration = {
+    icon = "gfx/interface/illustrations/decisions/decision_POD_lament.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}

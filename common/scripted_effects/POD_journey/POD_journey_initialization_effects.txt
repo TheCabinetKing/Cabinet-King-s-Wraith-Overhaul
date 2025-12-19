@@ -136,6 +136,42 @@ POD_initialize_journey_GUI = {
 		PRESTIGE = 0
 		PIETY    = 0
     }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_greed
+        GUITYPE  = journey
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_creativity
+        GUITYPE  = journey
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_compassion
+        GUITYPE  = journey
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_justice
+        GUITYPE  = journey
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
 	
 	# Great Journeys
 	

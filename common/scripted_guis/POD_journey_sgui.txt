@@ -2660,6 +2660,106 @@ fulfill_passion_love_travel_phase = {
 	}
 }
 
+fulfill_passion_greed_requirements = {
+	scope = character
+	is_shown = {
+        POD_is_wraith_trigger = yes
+        POD_has_fetter_of_type = { TYPE = greed }
+    }
+	is_valid = { always = yes }
+}
+
+fulfill_passion_greed_on_end = {
+	scope = character
+	effect = {
+		POD_journey_select_capital_destination_effect = yes
+	}
+}
+
+fulfill_passion_greed_travel_phase = {
+	scope = character
+	effect = {
+		POD_journey_start_travel_phase = {
+			EVENT = POD_wraith_passions.300
+		}
+	}
+}
+
+fulfill_passion_creativity_requirements = {
+	scope = character
+	is_shown = {
+        POD_is_wraith_trigger = yes
+        POD_has_fetter_of_type = { TYPE = creativity }
+    }
+	is_valid = { always = yes }
+}
+
+fulfill_passion_creativity_on_end = {
+	scope = character
+	effect = {
+		POD_journey_select_capital_destination_effect = yes
+	}
+}
+
+fulfill_passion_creativity_travel_phase = {
+	scope = character
+	effect = {
+		POD_journey_start_travel_phase = {
+			EVENT = POD_wraith_passions.400
+		}
+	}
+}
+
+fulfill_passion_compassion_requirements = {
+	scope = character
+	is_shown = {
+        POD_is_wraith_trigger = yes
+        POD_has_fetter_of_type = { TYPE = compassion }
+    }
+	is_valid = { always = yes }
+}
+
+fulfill_passion_compassion_on_end = {
+	scope = character
+	effect = {
+		POD_journey_select_capital_destination_effect = yes
+	}
+}
+
+fulfill_passion_compassion_travel_phase = {
+	scope = character
+	effect = {
+		POD_journey_start_travel_phase = {
+			EVENT = POD_wraith_passions.400
+		}
+	}
+}
+
+fulfill_passion_justice_requirements = {
+	scope = character
+	is_shown = {
+        POD_is_wraith_trigger = yes
+        POD_has_fetter_of_type = { TYPE = justice }
+    }
+	is_valid = { always = yes }
+}
+
+fulfill_passion_justice_on_end = {
+	scope = character
+	effect = {
+		POD_journey_select_capital_destination_effect = yes
+	}
+}
+
+fulfill_passion_justice_travel_phase = {
+	scope = character
+	effect = {
+		POD_journey_start_travel_phase = {
+			EVENT = POD_wraith_passions.400
+		}
+	}
+}
+
 
 # ###############################
 # ##### TRAIT JOURNEY TYPES #####
