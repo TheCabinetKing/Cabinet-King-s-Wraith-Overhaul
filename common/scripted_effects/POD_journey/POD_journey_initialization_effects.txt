@@ -127,6 +127,15 @@ POD_initialize_journey_GUI = {
 		PRESTIGE = 0
 		PIETY    = 0
     }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_love
+        GUITYPE  = journey
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
 	
 	# Great Journeys
 	

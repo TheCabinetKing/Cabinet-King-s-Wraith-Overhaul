@@ -2171,13 +2171,26 @@ study_true_name_trait_journey_illustration = {
 }
 
 fulfill_passion_hatred_icon = {
-    icon = "gfx/interface/icons/character_interactions/holy_order.dds"
+    icon = "gfx/interface/icons/faith/spectreskull.dds"
     potential = { always = no }
     group = culture_group_regional
     culture_era = culture_era_late_medieval
 }
 fulfill_passion_hatred_illustration = {
-    icon = "gfx/interface/illustrations/decisions/shitsonfireyo.dds"
+    icon = "gfx/interface/illustrations/decisions/decision_POD_lament.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+
+fulfill_passion_love_icon = {
+    icon = "gfx/interface/icons/faith/spectreskull.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+fulfill_passion_love_illustration = {
+    icon = "gfx/interface/illustrations/decisions/decision_POD_lament.dds"
     potential = { always = no }
     group = culture_group_regional
     culture_era = culture_era_late_medieval

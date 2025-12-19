@@ -2635,6 +2635,31 @@ fulfill_passion_hatred_travel_phase = {
 	}
 }
 
+fulfill_passion_love_requirements = {
+	scope = character
+	is_shown = {
+        POD_is_wraith_trigger = yes
+        POD_has_fetter_of_type = { TYPE = love }
+    }
+	is_valid = { always = yes }
+}
+
+fulfill_passion_love_on_end = {
+	scope = character
+	effect = {
+		POD_journey_select_capital_destination_effect = yes
+	}
+}
+
+fulfill_passion_love_travel_phase = {
+	scope = character
+	effect = {
+		POD_journey_start_travel_phase = {
+			EVENT = POD_wraith_passions.200
+		}
+	}
+}
+
 
 # ###############################
 # ##### TRAIT JOURNEY TYPES #####

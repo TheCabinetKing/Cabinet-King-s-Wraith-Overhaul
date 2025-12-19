@@ -25,13 +25,13 @@ POD_wraith_passions.100 = {
     # Indulge Dark Passion. Should always be last in list.
     option = {
         name = POD_wraith_passions.100.option.b
-        trigger_event = POD_wraith_passions.120
+        trigger_event = POD_wraith_passions.199
     }
 
     # No option to back out, as observing a mortal is a safe option anyway.
 }
 
-# Indulge Hatred by observing a mortal (% chance to regain small amount of Pathos).
+# Indulge Hatred by observing a mortal killing another (% chance to regain small amount of Pathos).
 POD_wraith_passions.110 = {
     type = character_event
     content_source = dlc_POD
@@ -41,8 +41,9 @@ POD_wraith_passions.110 = {
     immediate = {
         create_character = {
             location = root.location
-            template = pool_repopulate_martial
+            template = pool_repopulate_prowess
             trait = mortal
+            culture = root.location.culture
             faith = faith:innocence
             random_traits = yes
         
@@ -63,19 +64,19 @@ POD_wraith_passions.110 = {
     }
 }
 
-#Indulge Hatred by wanton slaughter (Dark Passion, but fully refill Pathos)
-POD_wraith_passions.120 = {
+# Indulge Hatred by slaughtering wraiths of other Faiths (Dark Passion, but fully refill Pathos)
+POD_wraith_passions.199 = {
     type = character_event
     content_source = dlc_POD
-    title = POD_wraith_passions.120.t
-    desc = POD_wraith_passions.120.desc
+    title = POD_wraith_passions.199.t
+    desc = POD_wraith_passions.199.desc
 
     immediate = {
         create_character = {
             location = root.location
             template = pool_repopulate_martial
             trait = wraith
-            faith = faith:
+            faith = root.faith
             random_traits = yes
         
             save_scope_as = victim
@@ -93,8 +94,513 @@ POD_wraith_passions.120 = {
     }
     theme = wraith
     option = {
-        name = POD_wraith_passions.120.confirm
-        flavor = POD_wraith_passions.120.confirm.flavor
+        name = POD_wraith_passions.199.confirm
+        flavor = POD_wraith_passions.199.confirm.flavor
+        POD_pathos_income_effect = { COUNT = 5 }
+		POD_static_stress_gain = { COUNT = 100 }
+    }
+}
+
+
+###################################
+# Indulge Passion: Love.
+###################################
+POD_wraith_passions.200 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.200.t
+    desc = POD_wraith_passions.200.desc
+
+    right_portrait = root
+    theme = wraith
+
+    immediate = {
+        POD_end_journey_effect = yes
+    }
+
+    # Observe mortal.
+    option = {
+        name = POD_wraith_passions.200.option.a
+        trigger_event = POD_wraith_passions.210
+    }
+
+    # Indulge Dark Passion. Should always be last in list.
+    option = {
+        name = POD_wraith_passions.200.option.b
+        trigger_event = POD_wraith_passions.299
+    }
+
+    # No option to back out, as observing a mortal is a safe option anyway.
+}
+
+# Indulge Love by observing a mortal in romance (% chance to regain small amount of Pathos).
+POD_wraith_passions.210 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.210.t
+    desc = POD_wraith_passions.210.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            template = pool_repopulate_diplomacy
+            trait = mortal
+            culture = root.location.culture
+            faith = faith:innocence
+            random_traits = yes
+        
+            save_scope_as = lover
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:lover
+    }
+    theme = wraith
+    
+    option = {
+        name = POD_wraith_passions.210.confirm
+        flavor = POD_wraith_passions.210.confirm.flavor
+        POD_pulse_chance_passion = { TYPE = love }
+    }
+}
+
+# Indulge Love through isolating a follower who looks up to you, so they can't 'fall under bad influences' (Dark Passion, but fully refill Pathos)
+POD_wraith_passions.299 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.299.t
+    desc = POD_wraith_passions.299.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            trait = wraith
+            faith = root.faith
+            random_traits = yes
+        
+            save_scope_as = lover
+        }
+        scope:lover = {
+            trigger_event = {
+                id = POD_wraith_maintenance.20
+            }
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:lover
+    }
+    theme = wraith
+    option = {
+        name = POD_wraith_passions.299.confirm
+        flavor = POD_wraith_passions.299.confirm.flavor
+        POD_pathos_income_effect = { COUNT = 5 }
+		POD_static_stress_gain = { COUNT = 100 }
+    }
+}
+
+
+###################################
+# Indulge Passion: Greed.
+###################################
+POD_wraith_passions.300 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.300.t
+    desc = POD_wraith_passions.300.desc
+
+    right_portrait = root
+    theme = wraith
+
+    immediate = {
+        POD_end_journey_effect = yes
+    }
+
+    # Observe mortal.
+    option = {
+        name = POD_wraith_passions.300.option.a
+        trigger_event = POD_wraith_passions.310
+    }
+
+    # Indulge Dark Passion. Should always be last in list.
+    option = {
+        name = POD_wraith_passions.300.option.b
+        trigger_event = POD_wraith_passions.399
+    }
+
+    # No option to back out, as observing a mortal is a safe option anyway.
+}
+
+# Indulge Greed by observing a mortal enjoying their wealth (% chance to regain small amount of Pathos).
+POD_wraith_passions.310 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.310.t
+    desc = POD_wraith_passions.310.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            template = pool_repopulate_diplomacy
+            trait = mortal
+            culture = root.location.culture
+            faith = faith:innocence
+            random_traits = yes
+        
+            save_scope_as = scrooge
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:scrooge
+    }
+    theme = wraith
+    
+    option = {
+        name = POD_wraith_passions.310.confirm
+        flavor = POD_wraith_passions.310.confirm.flavor
+        POD_pulse_chance_passion = { TYPE = greed }
+    }
+}
+
+# Indulge Greed through seizing what belongs to your subjects (Dark Passion, but fully refill Pathos)
+POD_wraith_passions.399 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.399.t
+    desc = POD_wraith_passions.399.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            trait = wraith
+            faith = root.faith
+            random_traits = yes
+        
+            save_scope_as = victim
+        }
+        scope:victim = {
+            trigger_event = {
+                id = POD_wraith_maintenance.20
+            }
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:victim
+    }
+    theme = wraith
+    option = {
+        name = POD_wraith_passions.399.confirm
+        flavor = POD_wraith_passions.399.confirm.flavor
+        POD_pathos_income_effect = { COUNT = 5 }
+		POD_static_stress_gain = { COUNT = 100 }
+    }
+}
+
+
+###################################
+# Indulge Passion: Creativity.
+###################################
+POD_wraith_passions.400 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.400.t
+    desc = POD_wraith_passions.400.desc
+
+    right_portrait = root
+    theme = wraith
+
+    immediate = {
+        POD_end_journey_effect = yes
+    }
+
+    # Observe mortal.
+    option = {
+        name = POD_wraith_passions.400.option.a
+        trigger_event = POD_wraith_passions.410
+    }
+
+    # Indulge Dark Passion. Should always be last in list.
+    option = {
+        name = POD_wraith_passions.400.option.b
+        trigger_event = POD_wraith_passions.499
+    }
+
+    # No option to back out, as observing a mortal is a safe option anyway.
+}
+
+# Indulge Creativity by observing a mortal painting (% chance to regain small amount of Pathos).
+POD_wraith_passions.410 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.410.t
+    desc = POD_wraith_passions.410.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            template = pool_repopulate_diplomacy
+            trait = mortal
+            culture = root.location.culture
+            faith = faith:innocence
+            random_traits = yes
+        
+            save_scope_as = artist
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:artist
+    }
+    theme = wraith
+    
+    option = {
+        name = POD_wraith_passions.410.confirm
+        flavor = POD_wraith_passions.410.confirm.flavor
+        POD_pulse_chance_passion = { TYPE = creativity }
+    }
+}
+
+# Indulge Creativity through tearing down another's works (Dark Passion, but fully refill Pathos)
+POD_wraith_passions.499 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.499.t
+    desc = POD_wraith_passions.499.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            trait = wraith
+            faith = root.faith
+            random_traits = yes
+        
+            save_scope_as = victim
+        }
+        scope:victim = {
+            trigger_event = {
+                id = POD_wraith_maintenance.20
+            }
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:victim
+    }
+    theme = wraith
+    option = {
+        name = POD_wraith_passions.499.confirm
+        flavor = POD_wraith_passions.499.confirm.flavor
+        POD_pathos_income_effect = { COUNT = 5 }
+		POD_static_stress_gain = { COUNT = 100 }
+    }
+}
+
+
+###################################
+# Indulge Passion: Compassion.
+###################################
+POD_wraith_passions.500 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.500.t
+    desc = POD_wraith_passions.500.desc
+
+    right_portrait = root
+    theme = wraith
+
+    immediate = {
+        POD_end_journey_effect = yes
+    }
+
+    # Observe mortal.
+    option = {
+        name = POD_wraith_passions.500.option.a
+        trigger_event = POD_wraith_passions.510
+    }
+
+    # Indulge Dark Passion. Should always be last in list.
+    option = {
+        name = POD_wraith_passions.500.option.b
+        trigger_event = POD_wraith_passions.599
+    }
+
+    # No option to back out, as observing a mortal is a safe option anyway.
+}
+
+# Indulge Compassion by observing a mortal helping another in need (% chance to regain small amount of Pathos).
+POD_wraith_passions.510 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.510.t
+    desc = POD_wraith_passions.510.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            template = pool_repopulate_diplomacy
+            trait = mortal
+            culture = root.location.culture
+            faith = faith:innocence
+            random_traits = yes
+        
+            save_scope_as = artist
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:artist
+    }
+    theme = wraith
+    
+    option = {
+        name = POD_wraith_passions.510.confirm
+        flavor = POD_wraith_passions.510.confirm.flavor
+        POD_pulse_chance_passion = { TYPE = compassion }
+    }
+}
+
+# Indulge Compassion through lying to wraiths in their final moments (Dark Passion, but fully refill Pathos)
+POD_wraith_passions.599 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.599.t
+    desc = POD_wraith_passions.599.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            trait = wraith
+            faith = root.faith
+            random_traits = yes
+        
+            save_scope_as = victim
+        }
+        scope:victim = {
+            trigger_event = {
+                id = POD_wraith_maintenance.20
+            }
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:victim
+    }
+    theme = wraith
+    option = {
+        name = POD_wraith_passions.599.confirm
+        flavor = POD_wraith_passions.599.confirm.flavor
+        POD_pathos_income_effect = { COUNT = 5 }
+		POD_static_stress_gain = { COUNT = 100 }
+    }
+}
+
+
+###################################
+# Indulge Passion: Justice.
+###################################
+POD_wraith_passions.600 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.600.t
+    desc = POD_wraith_passions.600.desc
+
+    right_portrait = root
+    theme = wraith
+
+    immediate = {
+        POD_end_journey_effect = yes
+    }
+
+    # Observe mortal.
+    option = {
+        name = POD_wraith_passions.600.option.a
+        trigger_event = POD_wraith_passions.510
+    }
+
+    # Indulge Dark Passion. Should always be last in list.
+    option = {
+        name = POD_wraith_passions.600.option.b
+        trigger_event = POD_wraith_passions.599
+    }
+
+    # No option to back out, as observing a mortal is a safe option anyway.
+}
+
+# Indulge Justice by observing a mortal passing judgement (% chance to regain small amount of Pathos).
+POD_wraith_passions.610 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.610.t
+    desc = POD_wraith_passions.610.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            template = pool_repopulate_martial
+            trait = mortal
+            culture = root.location.culture
+            faith = faith:innocence
+            random_traits = yes
+        
+            save_scope_as = judge
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:judge
+    }
+    theme = wraith
+    
+    option = {
+        name = POD_wraith_passions.610.confirm
+        flavor = POD_wraith_passions.610.confirm.flavor
+        POD_pulse_chance_passion = { TYPE = justice }
+    }
+}
+
+# Indulge Justice through harsh sentences to 'send a message' (Dark Passion, but fully refill Pathos)
+POD_wraith_passions.699 = {
+    type = character_event
+    content_source = dlc_POD
+    title = POD_wraith_passions.699.t
+    desc = POD_wraith_passions.699.desc
+
+    immediate = {
+        create_character = {
+            location = root.location
+            trait = wraith
+            faith = root.faith
+            random_traits = yes
+        
+            save_scope_as = victim
+        }
+        scope:victim = {
+            trigger_event = {
+                id = POD_wraith_maintenance.20
+            }
+        }
+    }
+
+    left_portrait = root
+    right_portrait = {
+        character = scope:victim
+    }
+    theme = wraith
+    option = {
+        name = POD_wraith_passions.699.confirm
+        flavor = POD_wraith_passions.699.confirm.flavor
         POD_pathos_income_effect = { COUNT = 5 }
 		POD_static_stress_gain = { COUNT = 100 }
     }
