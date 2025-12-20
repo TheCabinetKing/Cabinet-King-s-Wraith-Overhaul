@@ -2170,6 +2170,19 @@ study_true_name_trait_journey_illustration = {
 	culture_era = culture_era_final_nights
 }
 
+fulfill_passion = {
+    icon = "gfx/interface/icons/faith/spectreskull.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+fulfill_passion_illustration = {
+    icon = "gfx/interface/illustrations/decisions/decision_POD_lament.dds"
+    potential = { always = no }
+    group = culture_group_regional
+    culture_era = culture_era_late_medieval
+}
+
 fulfill_passion_hatred_icon = {
     icon = "gfx/interface/icons/faith/spectreskull.dds"
     potential = { always = no }

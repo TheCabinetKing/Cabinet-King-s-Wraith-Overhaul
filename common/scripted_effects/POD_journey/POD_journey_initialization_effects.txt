@@ -111,6 +111,15 @@ POD_initialize_journey_GUI = {
 	}
 
 	POD_add_to_journey_list = {
+		TYPE     = fulfill_passion
+		GUITYPE  = journey
+		MONTHLY  = seek_knowledge
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+	}
+
+	POD_add_to_journey_list = {
 		TYPE     = study_true_name_journey
 		GUITYPE  = journey
 		MONTHLY  = study_true_name_journey
@@ -118,60 +127,6 @@ POD_initialize_journey_GUI = {
 		PRESTIGE = 0
 		PIETY    = 250
 	}
-
-    POD_add_to_journey_list = {
-        TYPE     = fulfill_passion_hatred
-        GUITYPE  = journey
-		MONTHLY  = hunt_journey
-		GOLD     = 0
-		PRESTIGE = 0
-		PIETY    = 0
-    }
-
-	POD_add_to_journey_list = {
-        TYPE     = fulfill_passion_love
-        GUITYPE  = journey
-		MONTHLY  = hunt_journey
-		GOLD     = 0
-		PRESTIGE = 0
-		PIETY    = 0
-    }
-
-	POD_add_to_journey_list = {
-        TYPE     = fulfill_passion_greed
-        GUITYPE  = journey
-		MONTHLY  = hunt_journey
-		GOLD     = 0
-		PRESTIGE = 0
-		PIETY    = 0
-    }
-
-	POD_add_to_journey_list = {
-        TYPE     = fulfill_passion_creativity
-        GUITYPE  = journey
-		MONTHLY  = hunt_journey
-		GOLD     = 0
-		PRESTIGE = 0
-		PIETY    = 0
-    }
-
-	POD_add_to_journey_list = {
-        TYPE     = fulfill_passion_compassion
-        GUITYPE  = journey
-		MONTHLY  = hunt_journey
-		GOLD     = 0
-		PRESTIGE = 0
-		PIETY    = 0
-    }
-
-	POD_add_to_journey_list = {
-        TYPE     = fulfill_passion_justice
-        GUITYPE  = journey
-		MONTHLY  = hunt_journey
-		GOLD     = 0
-		PRESTIGE = 0
-		PIETY    = 0
-    }
 	
 	# Great Journeys
 	
@@ -1179,4 +1134,58 @@ POD_initialize_journey_GUI = {
 		PRESTIGE = 0
 		PIETY    = 0
 	}
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_hatred
+        GUITYPE  = fulfill_passion
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_love
+        GUITYPE  = fulfill_passion
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_greed
+        GUITYPE  = fulfill_passion
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_creativity
+        GUITYPE  = fulfill_passion
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_compassion
+        GUITYPE  = fulfill_passion
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
+
+	POD_add_to_journey_list = {
+        TYPE     = fulfill_passion_justice
+        GUITYPE  = fulfill_passion
+		MONTHLY  = hunt_journey
+		GOLD     = 0
+		PRESTIGE = 0
+		PIETY    = 0
+    }
 }

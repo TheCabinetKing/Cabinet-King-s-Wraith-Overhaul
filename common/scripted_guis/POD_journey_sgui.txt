@@ -2610,6 +2610,29 @@ demon_temp_journey_travel_phase = {
 	}
 }
 
+# GUI only
+fulfill_passion_requirements = {
+	scope = character
+	is_shown = {
+		POD_is_wraith_trigger = yes
+	}
+	is_valid = { always = yes }
+}
+
+fulfill_passion_on_end = {
+	scope = character
+	effect = {
+		#
+	}
+}
+
+fulfill_passion_travel_phase = {
+	scope = character
+	effect = {
+		#
+	}
+}
+
 fulfill_passion_hatred_requirements = {
 	scope = character
 	is_shown = {
